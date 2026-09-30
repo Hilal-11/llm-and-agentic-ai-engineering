@@ -1,0 +1,1090 @@
+ARTIFICIAL INTELLIGENCE — COMPREHENSIVE KNOWLEDGE BASE
+===============================================================
+
+Purpose
+-------
+This document is a plain-text knowledge base for learning and experimenting
+with Generative AI, LangChain, RAG, embeddings, vector databases, and AI
+agents. It is intentionally structured into clear sections so it can also
+be used as sample data for document loading, chunking, retrieval, and
+question-answering experiments.
+
+TABLE OF CONTENTS
+-----------------
+1. Artificial Intelligence
+2. Machine Learning
+3. Deep Learning
+4. Neural Networks
+5. Natural Language Processing
+6. Large Language Models
+7. Transformers
+8. Tokens
+9. Embeddings
+10. Prompt Engineering
+11. Generative AI
+12. Foundation Models
+13. Fine-Tuning
+14. Retrieval-Augmented Generation
+15. Vector Databases
+16. Semantic Search
+17. LangChain
+18. LangGraph
+19. Tools and Tool Calling
+20. AI Agents
+21. Agentic AI
+22. Memory
+23. Structured Output
+24. Evaluation
+25. Hallucinations
+26. AI Safety and Security
+27. Production AI Systems
+28. Important AI Terminology
+29. Example AI Application Architectures
+30. Learning Roadmap
+
+1. ARTIFICIAL INTELLIGENCE
+--------------------------
+Artificial Intelligence, commonly called AI, is the field of computing
+focused on building systems that can perform tasks that normally require
+human-like intelligence. These tasks can include understanding language,
+recognizing images, making predictions, finding patterns, planning actions,
+reasoning over information, and generating content.
+
+AI is a broad field. Machine learning is one major approach used to build AI
+systems. Deep learning is a subset of machine learning based primarily on
+multi-layer neural networks. Generative AI is a category of AI systems that
+can create new content such as text, images, audio, video, or software code.
+
+Traditional software usually follows explicitly programmed rules:
+input -> rules -> output.
+
+Machine learning systems can instead learn patterns from examples:
+data -> learning algorithm -> trained model -> prediction or generation.
+
+An AI system may contain several components. A modern application can include
+a user interface, an application server, an AI model, retrieval systems,
+databases, tools, authentication, monitoring, and evaluation infrastructure.
+
+2. MACHINE LEARNING
+-------------------
+Machine Learning is a branch of AI in which algorithms learn patterns from
+data and use those patterns to make predictions or decisions.
+
+The major categories of machine learning include supervised learning,
+unsupervised learning, and reinforcement learning.
+
+Supervised learning uses labeled examples. A dataset might contain customer
+records where each record is labeled as "fraud" or "not fraud". The model
+learns a relationship between input features and target labels.
+
+Classification predicts a category. Examples include spam detection,
+sentiment classification, and image category recognition.
+
+Regression predicts a numerical value. Examples include predicting house
+prices, demand, temperature, or revenue.
+
+Unsupervised learning works with data where target labels are not provided.
+Clustering is a common technique that groups similar data points.
+
+Reinforcement learning involves an agent interacting with an environment.
+The agent takes actions and receives rewards or penalties. Over time it
+learns a strategy for choosing actions.
+
+Important machine-learning concepts include training data, validation data,
+test data, features, labels, model parameters, hyperparameters, loss
+functions, optimization, overfitting, underfitting, and generalization.
+
+Overfitting occurs when a model learns the training data too closely and
+performs poorly on new data. Underfitting occurs when a model is too simple
+to capture important patterns.
+
+3. DEEP LEARNING
+----------------
+Deep Learning is a subfield of machine learning that uses neural networks
+with multiple layers. Deep learning has become particularly important for
+computer vision, speech recognition, natural language processing, and
+generative AI.
+
+Deep neural networks can automatically learn useful representations from
+large datasets. Instead of manually designing every feature, the network
+learns intermediate representations during training.
+
+Deep learning generally benefits from large datasets, substantial
+computational resources, and appropriate optimization techniques.
+
+Common deep-learning architectures include convolutional neural networks,
+recurrent neural networks, transformers, autoencoders, and diffusion models.
+
+4. NEURAL NETWORKS
+------------------
+A neural network consists of connected computational units organized into
+layers. A typical network contains an input layer, one or more hidden layers,
+and an output layer.
+
+Each connection has a parameter called a weight. During training, the model
+adjusts its weights to reduce an objective or loss function.
+
+An activation function introduces non-linearity into a neural network.
+Examples include ReLU, sigmoid, and tanh.
+
+Backpropagation is a method used to calculate gradients of the loss with
+respect to model parameters. An optimizer then updates those parameters.
+
+Common optimizers include stochastic gradient descent and Adam.
+
+Modern language models may contain billions or more parameters. A parameter
+is a learned numerical value inside a model. More parameters do not
+automatically mean that a model is better for every task.
+
+5. NATURAL LANGUAGE PROCESSING
+------------------------------
+Natural Language Processing, or NLP, is the field of AI concerned with
+computational processing of human language.
+
+NLP tasks include text classification, translation, summarization,
+information extraction, question answering, sentiment analysis, named
+entity recognition, speech-related processing, and language generation.
+
+Earlier NLP systems often relied heavily on manually designed features and
+statistical methods. Modern NLP is dominated by neural networks and
+transformer-based architectures.
+
+Language understanding involves converting text into representations that
+models can process. Modern language models learn rich representations from
+large amounts of text and other data.
+
+6. LARGE LANGUAGE MODELS
+------------------------
+A Large Language Model, or LLM, is a machine-learning model trained on large
+amounts of data to process and generate language.
+
+Many modern LLMs use transformer architectures. During pretraining, a model
+learns statistical patterns in large datasets. Depending on the training
+objective and architecture, the model can learn grammar, facts, coding
+patterns, reasoning patterns, and relationships between concepts.
+
+A language model does not store knowledge in the same way a traditional
+database does. Its parameters encode learned statistical representations.
+As a result, an LLM should not automatically be treated as a reliable
+database of facts.
+
+An LLM receives a sequence of input tokens and produces output tokens. In a
+chat application, the input can contain system instructions, user messages,
+assistant messages, retrieved documents, tool results, and other context.
+
+Important LLM properties include context window, token limits, latency,
+cost, model capability, temperature, reliability, and output quality.
+
+7. TRANSFORMERS
+---------------
+The Transformer is a neural-network architecture that became foundational to
+modern language models.
+
+Transformers use attention mechanisms to allow the model to relate different
+parts of an input sequence. Self-attention lets each token interact with
+other tokens in the sequence.
+
+A simplified transformer block can contain attention, normalization, and a
+feed-forward network.
+
+Transformers can process relationships between tokens efficiently and can
+be scaled to very large models.
+
+The architecture has influenced many systems for text, code, images, audio,
+and multimodal AI.
+
+8. TOKENS
+---------
+A token is a unit of text processed by a language model. Tokens are not
+necessarily equal to words. A word can be represented by one token or
+multiple tokens depending on the tokenizer.
+
+For example, a tokenizer may split a sentence into words, word fragments,
+punctuation, or other pieces.
+
+Tokenization matters because language models have limits and costs that are
+often measured using tokens.
+
+A context window is the amount of tokenized information a model can process
+in a request. The context may include instructions, conversation history,
+documents, tool outputs, and the model's generated response.
+
+When building RAG systems, chunk size should be chosen with token limits and
+retrieval quality in mind.
+
+9. EMBEDDINGS
+-------------
+An embedding is a numerical vector representation of data. Text embeddings
+represent the semantic characteristics of text as numerical coordinates in
+a high-dimensional vector space.
+
+Texts with related meanings can have vectors that are close together under a
+suitable similarity measure.
+
+Embeddings are useful for semantic search, recommendation systems,
+clustering, duplicate detection, retrieval-augmented generation, and
+classification.
+
+A sentence can be converted into an embedding vector by an embedding model.
+The vector can then be stored in a vector database.
+
+Similarity can be calculated using measures such as cosine similarity,
+dot product, or Euclidean distance, depending on the system.
+
+Embeddings are not magic representations of truth. Their quality depends on
+the embedding model, data, language, domain, preprocessing, and retrieval
+method.
+
+10. PROMPT ENGINEERING
+----------------------
+Prompt engineering is the practice of designing instructions and context
+for AI models to improve the usefulness, consistency, and reliability of
+their outputs.
+
+A prompt may contain a role or system instruction, task description,
+constraints, examples, input data, formatting requirements, and context.
+
+A useful prompt is often explicit about the desired task and output.
+
+Few-shot prompting provides examples of desired behavior. Zero-shot
+prompting asks the model to perform a task without examples.
+
+Chain-of-thought reasoning should not be treated as a requirement to expose
+private reasoning. Applications can instead request concise explanations,
+structured intermediate results, or verifiable outputs where appropriate.
+
+Prompt templates are reusable prompt structures containing variables. For
+example:
+
+"Summarize the following document for a {audience}:
+{document}"
+
+Prompt templates are especially useful in application frameworks because the
+same structure can be reused with different inputs.
+
+11. GENERATIVE AI
+-----------------
+Generative AI refers to AI systems capable of generating new content.
+
+Examples include:
+- Text generation
+- Code generation
+- Image generation
+- Audio generation
+- Video generation
+- Synthetic data generation
+
+A generative AI application typically combines a foundation model with
+application-specific instructions, data, tools, retrieval, memory, and
+business logic.
+
+Generative AI is different from a simple search engine. Search retrieves
+existing information, while a generative model produces an output based on
+its learned parameters and supplied context.
+
+However, production systems often combine search and generation. RAG is one
+important example.
+
+12. FOUNDATION MODELS
+---------------------
+A foundation model is a broadly trained model that can serve as a base for
+many downstream applications.
+
+A foundation model may be adapted using prompting, retrieval, fine-tuning,
+tool use, or other application techniques.
+
+Examples of applications include assistants, coding tools, document
+analysis, customer support, research systems, and content-generation
+applications.
+
+The model itself is only one component of a useful AI product. Data quality,
+system design, retrieval, evaluation, user experience, security, and
+observability can be equally important.
+
+13. FINE-TUNING
+---------------
+Fine-tuning means continuing the training of a pretrained model on a
+specific dataset or task.
+
+Fine-tuning can be useful when an application needs consistent behavior,
+specialized formatting, domain adaptation, or task-specific capabilities.
+
+Fine-tuning is different from RAG.
+
+RAG supplies external information at inference time. Fine-tuning changes
+model parameters.
+
+RAG is often useful when information changes frequently or needs to be
+traceable to source documents. Fine-tuning can be useful for behavior or
+task adaptation.
+
+The two techniques can also be combined.
+
+14. RETRIEVAL-AUGMENTED GENERATION
+----------------------------------
+Retrieval-Augmented Generation, commonly called RAG, is an architecture that
+combines information retrieval with language generation.
+
+A basic RAG pipeline is:
+
+documents
+   ->
+document loading
+   ->
+text splitting
+   ->
+embedding generation
+   ->
+vector database
+   ->
+user question
+   ->
+query embedding
+   ->
+similarity search
+   ->
+relevant chunks
+   ->
+LLM
+   ->
+answer
+
+The goal is to provide the model with relevant external context so that the
+answer can be grounded in retrieved information.
+
+A RAG system usually has two major stages.
+
+Indexing:
+1. Load documents.
+2. Clean or normalize text.
+3. Split documents into chunks.
+4. Generate embeddings.
+5. Store vectors and metadata.
+
+Retrieval and generation:
+1. Receive a user query.
+2. Convert the query into an embedding.
+3. Search for similar chunks.
+4. Optionally rerank results.
+5. Construct a prompt containing retrieved context.
+6. Send the prompt to the model.
+7. Generate an answer.
+8. Optionally provide source citations.
+
+Chunking is important. Very small chunks may lose context. Very large chunks
+may reduce retrieval precision and consume more context.
+
+Metadata can include source filename, page number, document type, title,
+section, date, author, or other useful attributes.
+
+15. VECTOR DATABASES
+--------------------
+A vector database stores vector representations and supports similarity
+search.
+
+Common capabilities include vector indexing, metadata filtering, similarity
+search, and retrieval.
+
+A typical stored record contains:
+- Vector
+- Original text or reference
+- Metadata
+- Document identifier
+- Chunk identifier
+
+Examples of vector database technologies include Chroma, Pinecone,
+Qdrant, Weaviate, Milvus, and pgvector-based PostgreSQL systems.
+
+The choice of vector database depends on scale, hosting requirements,
+latency, filtering, operational complexity, cost, and existing infrastructure.
+
+A vector database does not replace an ordinary relational database in every
+application. A production system may use both.
+
+16. SEMANTIC SEARCH
+-------------------
+Semantic search retrieves information based on meaning rather than relying
+only on exact keyword matches.
+
+Traditional keyword search can perform well for exact terms. Semantic
+search can find related concepts even when the wording differs.
+
+Example:
+
+Query:
+"What are the rules for returning a product?"
+
+A semantic search system may retrieve a document titled:
+"Refund and Exchange Policy"
+
+even if the query does not contain the exact phrase "refund and exchange."
+
+Hybrid search combines keyword retrieval and vector similarity retrieval.
+Hybrid retrieval can improve recall when exact names, identifiers, and
+semantic concepts all matter.
+
+Reranking can be used after initial retrieval to reorder candidate documents
+according to their relevance.
+
+17. LANGCHAIN
+-------------
+LangChain is a framework and ecosystem for building applications powered by
+language models and related AI components.
+
+LangChain can help developers connect models with prompts, structured
+outputs, tools, retrievers, document processing components, and application
+logic.
+
+A simple conceptual pipeline is:
+
+input
+  ->
+prompt
+  ->
+model
+  ->
+output
+
+LangChain can represent reusable application components and connect them
+into workflows.
+
+Important LangChain concepts include:
+- Chat models
+- Messages
+- Prompt templates
+- Output parsers
+- Structured output
+- Runnables
+- LCEL
+- Tools
+- Tool calling
+- Retrievers
+- Document loaders
+- Text splitters
+- Vector stores
+
+LangChain should be viewed as an application framework, not as an AI model.
+The model provider and model are separate components.
+
+18. LANGGRAPH
+-------------
+LangGraph is designed for building stateful, controllable agent and
+workflow systems.
+
+A graph can contain nodes that perform operations and edges that define how
+execution moves between operations.
+
+A state object can store information shared across steps.
+
+LangGraph is useful when an AI application needs:
+- Multiple steps
+- Branching
+- Loops
+- Persistent state
+- Human approval
+- Tool execution
+- Error handling
+- Checkpoints
+- More explicit control over agent workflows
+
+A simple graph might look like:
+
+START
+  |
+retrieve information
+  |
+generate answer
+  |
+END
+
+A more complex system could include:
+START -> classify -> retrieve -> validate -> generate -> END
+
+or:
+
+START -> agent -> tool -> agent -> approval -> final response
+
+19. TOOLS AND TOOL CALLING
+--------------------------
+A tool is an external function that an AI model can request the application
+to execute.
+
+Examples include:
+- Weather lookup
+- Database query
+- Calculator
+- Web search
+- Sending an email
+- Creating a calendar event
+- Calling an internal API
+- Reading a document
+
+Tool calling allows a model to produce a structured request describing which
+tool should be called and which arguments should be supplied.
+
+The application executes the tool and sends the result back to the model.
+
+The model should not automatically be given unrestricted access to powerful
+operations. Tools should have clearly defined inputs, permissions,
+validation, and error handling.
+
+20. AI AGENTS
+-------------
+An AI agent is an AI-powered system that can select actions or tools as part
+of accomplishing a goal.
+
+A simplified agent loop is:
+
+Observe
+   ->
+Reason or decide
+   ->
+Choose action
+   ->
+Execute tool
+   ->
+Observe result
+   ->
+Continue or finish
+
+Agents differ from simple prompt-response applications because the system
+can dynamically decide what actions to take.
+
+Not every AI application needs an agent. A deterministic workflow can be
+simpler, faster, cheaper, and easier to test when the required sequence of
+operations is known in advance.
+
+21. AGENTIC AI
+--------------
+Agentic AI generally describes systems that can pursue goals through
+multi-step actions, planning, tool use, feedback, or adaptive workflows.
+
+Agentic systems can include:
+- Planning
+- Tool use
+- Memory
+- State
+- Reflection or validation
+- Multi-step execution
+- Human approval
+- Task decomposition
+
+An agentic system should have clear boundaries. Important production
+controls include tool permissions, timeouts, budgets, rate limits,
+validation, logging, and human escalation.
+
+22. MEMORY
+----------
+Memory in an AI application refers to mechanisms that allow information to
+persist across interactions or steps.
+
+Short-term memory can represent the current conversation or workflow state.
+
+Long-term memory can store selected information for future interactions.
+
+Conversation history can become expensive because every additional message
+may consume context. Applications often summarize, retrieve, or selectively
+include history rather than sending an unlimited transcript.
+
+Memory should be designed carefully. Sensitive information should not be
+stored unnecessarily, and applications should provide appropriate controls
+for retention and deletion.
+
+23. STRUCTURED OUTPUT
+---------------------
+Structured output means asking a model to produce data in a predictable
+schema rather than unrestricted natural language.
+
+For example, instead of:
+
+"The customer appears interested in a laptop."
+
+a structured result could be:
+
+{
+  "category": "laptop",
+  "intent": "purchase",
+  "confidence": 0.91
+}
+
+Structured outputs are useful for:
+- API responses
+- Database insertion
+- Classification
+- Information extraction
+- Workflow routing
+- Tool arguments
+
+Schemas can be represented using technologies such as JSON Schema or
+Python data models such as Pydantic.
+
+Validation is important because model output should not automatically be
+trusted simply because it appears structured.
+
+24. EVALUATION
+--------------
+AI evaluation measures how well an AI system performs its intended task.
+
+Traditional software can often be tested with exact expected outputs. AI
+systems can be more variable, so evaluation may require multiple metrics
+and test cases.
+
+For RAG systems, useful evaluation dimensions include:
+- Retrieval relevance
+- Retrieval recall
+- Context precision
+- Answer correctness
+- Groundedness
+- Citation accuracy
+- Response latency
+- Cost
+
+For agents, evaluation may include:
+- Tool selection accuracy
+- Argument correctness
+- Task completion
+- Safety behavior
+- Number of unnecessary steps
+- Failure recovery
+
+A good AI project should maintain a set of representative test questions
+and expected behaviors.
+
+25. HALLUCINATIONS
+------------------
+An AI hallucination is an output containing information that is unsupported,
+incorrect, or fabricated.
+
+Language models generate outputs based on learned patterns and context.
+They do not automatically verify every statement against a trusted source.
+
+Hallucination risk can be reduced through:
+- Retrieval
+- Grounded prompts
+- Structured outputs
+- Tool use
+- Validation
+- Source citations
+- Lower-risk workflows
+- Evaluation
+- Human review
+
+RAG can reduce unsupported answers by supplying relevant documents, but RAG
+does not guarantee correctness.
+
+A retrieved document can be outdated, irrelevant, incomplete, or incorrect.
+The generation step can also misinterpret retrieved information.
+
+26. AI SAFETY AND SECURITY
+--------------------------
+AI applications can introduce security risks beyond traditional software
+risks.
+
+Prompt injection occurs when untrusted content attempts to manipulate an AI
+system's instructions or behavior.
+
+For example, a retrieved webpage might contain text instructing an AI agent
+to ignore its original task. Applications should treat retrieved content as
+untrusted data rather than authoritative instructions.
+
+Other risks include:
+- Data leakage
+- Excessive tool permissions
+- Insecure tool execution
+- Malicious documents
+- Sensitive information exposure
+- Inadequate authentication
+- Poor access control
+- Denial-of-service through expensive model calls
+- Unvalidated generated code
+
+Important defenses include least-privilege permissions, input validation,
+output validation, sandboxing, secret management, access controls,
+monitoring, and human approval for sensitive actions.
+
+API keys should never be hard-coded into source code or committed to Git.
+
+27. PRODUCTION AI SYSTEMS
+-------------------------
+A production AI application usually needs more than a model call.
+
+A practical architecture may contain:
+
+Frontend
+   ->
+Backend API
+   ->
+AI orchestration layer
+   ->
+Model provider
+
+and may additionally connect to:
+
+Document storage
+Vector database
+Relational database
+Cache
+External APIs
+Observability
+Authentication
+Evaluation system
+
+Important production concerns include:
+- Reliability
+- Latency
+- Cost
+- Security
+- Scalability
+- Logging
+- Monitoring
+- Evaluation
+- Rate limiting
+- Retries
+- Timeouts
+- Caching
+- Versioning
+
+Streaming can improve perceived responsiveness by showing generated output
+incrementally.
+
+Caching can reduce repeated model calls.
+
+Retries should be carefully configured because blindly retrying expensive or
+non-idempotent operations can create additional problems.
+
+28. IMPORTANT AI TERMINOLOGY
+----------------------------
+
+AI:
+Artificial Intelligence.
+
+ML:
+Machine Learning.
+
+DL:
+Deep Learning.
+
+NLP:
+Natural Language Processing.
+
+LLM:
+Large Language Model.
+
+GenAI:
+Generative Artificial Intelligence.
+
+Transformer:
+A neural-network architecture based heavily on attention mechanisms.
+
+Token:
+A unit of text processed by a model.
+
+Embedding:
+A numerical vector representation of data.
+
+Inference:
+Running a trained model to produce an output.
+
+Training:
+The process of adjusting model parameters using data.
+
+Fine-tuning:
+Additional training of a pretrained model for a particular task or domain.
+
+Prompt:
+Instructions and context provided to a model.
+
+Context:
+Information supplied to the model during an interaction.
+
+Context window:
+The amount of tokenized information a model can process within a request.
+
+RAG:
+Retrieval-Augmented Generation.
+
+Retriever:
+A component that searches for relevant documents or chunks.
+
+Vector store:
+A system used to store and search vector representations.
+
+Agent:
+An AI-driven system capable of selecting actions or tools.
+
+Tool:
+A callable external function available to an AI system.
+
+Tool calling:
+A model-generated structured request to execute a tool.
+
+Memory:
+Information maintained across steps or interactions.
+
+Workflow:
+A predefined sequence of operations.
+
+State:
+Information maintained during execution of a workflow or agent.
+
+Chunk:
+A smaller section of a larger document used for retrieval or processing.
+
+Metadata:
+Additional information associated with a document or chunk.
+
+Reranking:
+Reordering retrieved candidates according to relevance.
+
+Grounding:
+Connecting an AI response to supplied evidence or trusted information.
+
+Inference latency:
+Time required to produce an AI response.
+
+Temperature:
+A generation parameter that can affect output variability in systems that
+support it.
+
+29. EXAMPLE AI APPLICATION ARCHITECTURES
+----------------------------------------
+
+A. SIMPLE CHAT APPLICATION
+
+User
+ |
+Frontend
+ |
+Backend
+ |
+Chat model
+ |
+Response
+
+
+B. DOCUMENT Q&A WITH RAG
+
+Documents
+ |
+Loader
+ |
+Text splitter
+ |
+Embeddings
+ |
+Vector database
+ |
+Retriever <---- User question
+ |
+Prompt + retrieved context
+ |
+LLM
+ |
+Answer + sources
+
+
+C. TOOL-USING ASSISTANT
+
+User
+ |
+LLM
+ |
+Decision
+ |
++---------+----------+
+|         |          |
+Search   Database   Calculator
+|         |          |
++---------+----------+
+ |
+Tool results
+ |
+LLM
+ |
+Final response
+
+
+D. AGENT WORKFLOW
+
+User
+ |
+Agent
+ |
++--------------------+
+|                    |
+Plan              Tool selection
+|                    |
++---------+----------+
+          |
+       Tool call
+          |
+       Observation
+          |
+       Validation
+          |
+       Final answer
+
+
+E. PRODUCTION RAG APPLICATION
+
+Client
+ |
+API
+ |
+Authentication
+ |
+Application service
+ |
++----------------------+-------------------+
+|                      |                   |
+Retriever            Database          AI model
+|                      |                   |
+Vector DB             Metadata          Generation
+|                      |                   |
++----------------------+-------------------+
+                       |
+                 Observability
+
+
+30. LEARNING ROADMAP
+--------------------
+A practical path for learning modern GenAI engineering is:
+
+PHASE 1 — AI AND LLM FUNDAMENTALS
+Learn:
+- AI vs ML vs deep learning
+- Neural networks
+- Transformers
+- LLMs
+- Tokens
+- Context windows
+- Inference
+- Model parameters
+- Prompting
+
+PHASE 2 — BASIC MODEL APPLICATIONS
+Build:
+- Basic LLM chat
+- Summarizer
+- Text classifier
+- Information extractor
+- Structured-output application
+
+Learn:
+- Messages
+- System messages
+- Human messages
+- AI messages
+- Prompt templates
+- Model invocation
+- Structured outputs
+- Error handling
+
+PHASE 3 — LANGCHAIN FUNDAMENTALS
+Learn:
+- LangChain model integrations
+- Messages
+- Prompt templates
+- Output parsers
+- Runnables
+- LCEL
+- Structured output
+- Tools
+- Tool calling
+- Retrievers
+
+Build:
+- Prompt pipeline
+- Structured extractor
+- Tool-calling assistant
+
+PHASE 4 — RAG
+Learn:
+- Document loading
+- Text splitting
+- Embeddings
+- Vector databases
+- Similarity search
+- Metadata filtering
+- Retrieval
+- Reranking
+- Grounded generation
+- RAG evaluation
+
+Build:
+- PDF Q&A
+- Personal knowledge-base assistant
+- Documentation chatbot
+
+PHASE 5 — LANGGRAPH
+Learn:
+- State
+- Nodes
+- Edges
+- Conditional routing
+- Loops
+- Persistence
+- Checkpoints
+- Human-in-the-loop
+
+Build:
+- Research workflow
+- Multi-step assistant
+- Approval-based agent
+
+PHASE 6 — AGENTS
+Learn:
+- Tool calling
+- Agent loops
+- Planning
+- Tool permissions
+- Memory
+- State
+- Error recovery
+- Evaluation
+
+Build:
+- Research agent
+- Developer assistant
+- Multi-tool productivity assistant
+
+PHASE 7 — PRODUCTION GENAI
+Learn:
+- API design
+- Authentication
+- Streaming
+- Observability
+- Evaluation
+- Rate limiting
+- Caching
+- Cost optimization
+- Security
+- Deployment
+
+Build:
+- Full-stack AI application
+- Production RAG system
+- Agentic application with monitoring
+
+FINAL PRINCIPLES
+----------------
+1. Learn the underlying AI concepts, not only framework APIs.
+2. Understand what an LLM can and cannot reliably do.
+3. Use retrieval when external or changing knowledge is required.
+4. Use tools when the model needs access to external systems or actions.
+5. Prefer deterministic workflows when the process is known in advance.
+6. Use agents when adaptive action selection provides real value.
+7. Validate model outputs before using them in important systems.
+8. Treat external documents and tool results as potentially untrusted data.
+9. Keep secrets such as API keys outside source code.
+10. Build small systems before attempting complex agent architectures.
+11. Evaluate AI systems using representative real-world test cases.
+12. Optimize for reliability and user value, not framework complexity.
+13. Understand the difference between model capability and application
+    engineering.
+14. Keep data, prompts, model configuration, retrieval, and business logic
+    modular so they can be changed independently.
+15. Document the architecture and assumptions of every production AI system.
+
+END OF KNOWLEDGE BASE
+=====================
